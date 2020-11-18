@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.44.2",
-  "hash": "73d49dc5cdf50f9224ba",
+  "hash": "810f10a98651dd430703",
   "publicPath": "/static/",
   "outputPath": "/Users/meredithgrubbs/Desktop/peep eats/peepeats-frontity-www/build/static",
   "assetsByChunkName": {
     "peepeats-frontity-www": [
       "peepeats-frontity-www.module.js",
-      "peepeats-frontity-www.e31bf3f5865bc702e1bc.hot-update.js"
+      "peepeats-frontity-www.806689b04d0647a730cc.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "e31bf3f5865bc702e1bc.hot-update.json",
+      "name": "806689b04d0647a730cc.hot-update.json",
       "size": 63,
       "chunks": [],
       "chunkNames": [],
@@ -40,8 +40,8 @@
       "emitted": false
     },
     {
-      "name": "peepeats-frontity-www.e31bf3f5865bc702e1bc.hot-update.js",
-      "size": 10248,
+      "name": "peepeats-frontity-www.806689b04d0647a730cc.hot-update.js",
+      "size": 5125,
       "chunks": [
         "peepeats-frontity-www"
       ],
@@ -56,7 +56,7 @@
     },
     {
       "name": "peepeats-frontity-www.module.js",
-      "size": 9288267,
+      "size": 9323419,
       "chunks": [
         "peepeats-frontity-www"
       ],
@@ -75,7 +75,7 @@
       ],
       "assets": [
         "peepeats-frontity-www.module.js",
-        "peepeats-frontity-www.e31bf3f5865bc702e1bc.hot-update.js"
+        "peepeats-frontity-www.806689b04d0647a730cc.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -88,7 +88,7 @@
       ],
       "assets": [
         "peepeats-frontity-www.module.js",
-        "peepeats-frontity-www.e31bf3f5865bc702e1bc.hot-update.js"
+        "peepeats-frontity-www.806689b04d0647a730cc.hot-update.js"
       ],
       "children": {},
       "childAssets": {}

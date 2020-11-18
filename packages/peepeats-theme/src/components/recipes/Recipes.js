@@ -52,34 +52,42 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  },
-  indicator: {
-    backgroundColor: "#33622b"
-  }
-}));
-
-const StyledTab = styled(Tab)`
-  text-transform: lowercase !important;
-  font-family: "Source Sans Pro", sans-serif !important;
-  font-size: 1em !important;
-  font-weight: 700 !important;
-`;
-
-const StyledTabPanel = styled(TabPanel)`
-  display: flex;
-  justify-content: flex-start;
-  width: 70%;
-  padding: 0;
-`;
-
 const Recipes = ({ state }) => {
+  const useStyles = makeStyles(theme => ({
+    root: {
+      flexGrow: 1,
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center"
+    },
+    appBar: {
+      backgroundColor: `${state.lightGreen}`,
+      boxShadow: "none",
+      display: "flex",
+      alignItems: "center"
+    },
+    indicator: {
+      backgroundColor: "#33622b"
+    },
+    tabs: {
+      color: "black",
+      width: "calc(70% + 80px)"
+    },
+    tab: {
+      textTransform: "lowercase",
+      fontFamily: "Source Sans Pro, sans-serif",
+      fontSize: "1em",
+      fontWeight: "700"
+    },
+    tabPanel: {
+      display: "flex",
+      alignItems: "flex-start",
+      width: "70%",
+      padding: "0"
+    }
+  }));
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -89,15 +97,7 @@ const Recipes = ({ state }) => {
 
   return (
     <div className={classes.root}>
-      <AppBar
-        position="static"
-        css={css`
-          background-color: ${state.lightGreen} !important;
-          box-shadow: none !important;
-          display: flex;
-          align-items: center;
-        `}
-      >
+      <AppBar position="static" className={classes.appBar}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -107,42 +107,38 @@ const Recipes = ({ state }) => {
             indicator: classes.indicator
           }}
           aria-label="scrollable force tabs example"
-          css={css`
-            color: black;
-            width: calc(70% + 80px);
-            }
-          `}
+          className={classes.tabs}
         >
-          <StyledTab label="All Recipes" {...a11yProps(0)} />
-          <StyledTab label="Item Two" {...a11yProps(1)} />
-          <StyledTab label="Item Three" {...a11yProps(2)} />
-          <StyledTab label="Item Four" {...a11yProps(3)} />
-          <StyledTab label="Item Five" {...a11yProps(4)} />
-          <StyledTab label="Item Six" {...a11yProps(5)} />
-          <StyledTab label="Item Seven" {...a11yProps(6)} />
+          <Tab className={classes.tab} label="All Recipes" {...a11yProps(0)} />
+          <Tab className={classes.tab} label="Item Two" {...a11yProps(1)} />
+          <Tab className={classes.tab} label="Item Three" {...a11yProps(2)} />
+          <Tab className={classes.tab} label="Item Four" {...a11yProps(3)} />
+          <Tab className={classes.tab} label="Item Five" {...a11yProps(4)} />
+          <Tab className={classes.tab} label="Item Six" {...a11yProps(5)} />
+          <Tab className={classes.tab} label="Item Seven" {...a11yProps(6)} />
         </Tabs>
       </AppBar>
-      <StyledTabPanel value={value} index={0}>
+      <TabPanel className={classes.tabPanel} value={value} index={0}>
         <RecipeCards />
-      </StyledTabPanel>
-      <StyledTabPanel value={value} index={1}>
+      </TabPanel>
+      <TabPanel className={classes.tabPanel} value={value} index={1}>
         Item Two
-      </StyledTabPanel>
-      <StyledTabPanel value={value} index={2}>
+      </TabPanel>
+      <TabPanel className={classes.tabPanel} value={value} index={2}>
         Item Three
-      </StyledTabPanel>
-      <StyledTabPanel value={value} index={3}>
+      </TabPanel>
+      <TabPanel className={classes.tabPanel} value={value} index={3}>
         Item Four
-      </StyledTabPanel>
-      <StyledTabPanel value={value} index={4}>
+      </TabPanel>
+      <TabPanel className={classes.tabPanel} value={value} index={4}>
         Item Five
-      </StyledTabPanel>
-      <StyledTabPanel value={value} index={5}>
+      </TabPanel>
+      <TabPanel className={classes.tabPanel} value={value} index={5}>
         Item Six
-      </StyledTabPanel>
-      <StyledTabPanel value={value} index={6}>
+      </TabPanel>
+      <TabPanel className={classes.tabPanel} value={value} index={6}>
         Item Seven
-      </StyledTabPanel>
+      </TabPanel>
     </div>
   );
 };

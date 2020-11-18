@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "frontity";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -8,16 +10,32 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-const useStyles = makeStyles({
-  root: {
-    margin: "1em 0.5em"
-  },
-  media: {
-    height: 140
-  }
-});
+const RecipeCard = ({ state }) => {
+  const useStyles = makeStyles({
+    root: {
+      margin: "1em 0.5em"
+    },
+    typography: {
+      fontFamily: "Source Sans Pro"
+    },
+    cardTitle: {
+      fontFamily: "hwt-aetna, serif"
+    },
+    media: {
+      height: 140
+    },
+    cardContent: {
+      paddingBottom: "0"
+    },
+    button: {
+      margin: "0 0.5em",
+      fontFamily: "Source Sans Pro",
+      textTransform: "lowercase",
+      color: `${state.darkGreen}`,
+      fontWeight: "bold"
+    }
+  });
 
-export default function RecipeCard() {
   const classes = useStyles();
 
   return (
@@ -25,27 +43,34 @@ export default function RecipeCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          src="https://peepeats.website/wp-content/uploads/2020/11/peep-eats-hero-1800.png"
-          title="Contemplative Reptile"
+          image="https://peepeats.website/wp-content/uploads/2020/11/robert-anasch-JZfPQTc7ais-unsplash.png"
+          title="caramel corn"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+        <CardContent className={classes.cardContent}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h1"
+            className={classes.cardTitle}
+          >
+            Caramel Corn
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography
+            variant="body2"
+            component="p"
+            className={classes.typography}
+          >
+            The best treat on a chilly fall evening.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
+        <Button size="small" className={classes.button}>
+          View Recipe
         </Button>
       </CardActions>
     </Card>
   );
-}
+};
+
+export default connect(RecipeCard);

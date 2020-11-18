@@ -1,0 +1,32 @@
+{
+  "name": "peepeats-frontity-www",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontity project",
+  "keywords": [
+    "frontity"
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "dev": "frontity dev",
+    "build": "frontity build",
+    "serve": "frontity serve"
+  },
+  "prettier": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
+    "@frontity/core": "^1.9.1",
+    "@frontity/html2react": "^1.5.0",
+    "@frontity/tiny-router": "^1.2.3",
+    "@frontity/wp-source": "^1.10.0",
+    "@material-ui/core": "^4.11.0",
+    "frontity": "^1.13.0",
+    "peepeats-theme": "file:packages/peepeats-theme",
+    "react-parallax": "^3.1.2"
+  }
+}

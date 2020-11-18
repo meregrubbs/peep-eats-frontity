@@ -1,0 +1,105 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.2",
+  "hash": "ee6c41f5057345f0437d",
+  "publicPath": "/static/",
+  "outputPath": "/Users/meredithgrubbs/Desktop/peep eats/peepeats-frontity-www/build/static",
+  "assetsByChunkName": {
+    "peepeats-frontity-www": [
+      "peepeats-frontity-www.module.js",
+      "peepeats-frontity-www.270a65826aee023e6364.hot-update.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "270a65826aee023e6364.hot-update.json",
+      "size": 63,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/favicon-16x16.png",
+      "size": 612,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/favicon-32x32.png",
+      "size": 921,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "peepeats-frontity-www.270a65826aee023e6364.hot-update.js",
+      "size": 8472,
+      "chunks": [
+        "peepeats-frontity-www"
+      ],
+      "chunkNames": [
+        "peepeats-frontity-www"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "peepeats-frontity-www.module.js",
+      "size": 9286491,
+      "chunks": [
+        "peepeats-frontity-www"
+      ],
+      "chunkNames": [
+        "peepeats-frontity-www"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "peepeats-frontity-www": {
+      "chunks": [
+        "peepeats-frontity-www"
+      ],
+      "assets": [
+        "peepeats-frontity-www.module.js",
+        "peepeats-frontity-www.270a65826aee023e6364.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "peepeats-frontity-www": {
+      "chunks": [
+        "peepeats-frontity-www"
+      ],
+      "assets": [
+        "peepeats-frontity-www.module.js",
+        "peepeats-frontity-www.270a65826aee023e6364.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": []
+}
